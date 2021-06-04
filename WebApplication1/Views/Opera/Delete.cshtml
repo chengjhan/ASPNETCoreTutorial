@@ -1,0 +1,34 @@
+﻿@model WebApplication1.Models.Opera
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Delete</title>
+</head>
+<body>
+    <h1>Opera Delete</h1>
+    <ul>
+        <li>
+            @Html.DisplayNameFor(m => m.Title):
+            @Html.DisplayFor(m => m.Title)
+        </li>
+        <li>
+            @Html.DisplayNameFor(m => m.Year):
+            @Html.DisplayFor(m => m.Year)
+        </li>
+        <li>
+            @Html.DisplayNameFor(m => m.Composer):
+            @Html.DisplayFor(m => m.Composer)
+        </li>
+    </ul>
+    <div>
+        <form asp-controller="opera" asp-action="delete">
+            <input type="submit" value="Delete" />
+        </form>
+    </div>
+    <p><a asp-controller="opera" asp-action="index">Back to List</a></p>
+</body>
+</html>

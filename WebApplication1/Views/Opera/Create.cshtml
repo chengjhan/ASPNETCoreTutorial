@@ -1,0 +1,35 @@
+﻿@model WebApplication1.Models.Opera
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Create</title>
+</head>
+<body>
+    <h1>Opera Create</h1>
+    <form asp-controller="opera" asp-action="create">
+        <div>
+            <label asp-for="Title"></label>
+            <input asp-for="Title" />
+            <span asp-validation-for="Title"></span>
+        </div>
+        <div>
+            <label asp-for="Year"></label>
+            <input asp-for="Year" />
+            <span asp-validation-for="Year"></span>
+        </div>
+        <div>
+            <label asp-for="Composer"></label>
+            <input asp-for="Composer" />
+            <span asp-validation-for="Composer"></span>
+        </div>
+        <div>
+            <input type="submit" value="Save" />
+        </div>
+    </form>
+    <p><a asp-controller="opera" asp-action="index">Back to List</a></p>
+</body>
+</html>
